@@ -76,7 +76,7 @@ text2.onclick = () => {
 text3.onclick = () => {
     one.style.height = "100vh"
     udd.style.display = "none"
-    settings.style.display = "none"
+    playlist.style.display = "none"
     settings.style.display = "block"
     active.className = "text2"
     text3.className = "active"
@@ -233,8 +233,8 @@ music5.onclick = () => {
     fortnite.pause()
     loveMe.pause()
     maskOff.pause()
-    fireMan.play()
     xcho.pause()
+    fireMan.play()
     nameMusic.innerHTML = "Xcho"
     nameMusic2.innerHTML = "I can fly"
 }
@@ -311,6 +311,7 @@ let first = document.querySelector('.first')
 let mscc = document.querySelector('#name-music')
 let inpp = document.querySelector('.inpp')
 let inp = document.querySelector('#inp')
+let on = document.querySelector('checkbox')
 
 daun.onclick = () => {
     p.classList.toggle('b')
@@ -373,7 +374,7 @@ saveSettings.onclick = () => {
             text3.className = "active"
             text3.style.color = "#EB735C"
         }
-
+        
         ii.forEach(ii => {
             ii.onmouseenter = () => {
                 one1.forEach(one1 => {

@@ -344,3 +344,14 @@ input:checked+.slider:before {
 .options, .like{
     display: none;
 }
+
+
+.muz{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.io{
+    margin: 20px 25px;
+}
