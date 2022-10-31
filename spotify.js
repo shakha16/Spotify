@@ -1,48 +1,4 @@
-let arrOfSongs = [
-    {
-        id: 1,
-        name: "Mask off",
-        artist: "Unknown",
-        time: "2:38",
-        img: "",
-        audio: "./Musics/07 Mask Off.mp3"
-    },
-]
-
-
-
 /////work\\\\\
-let randomSongs = document.querySelector('.musics')
-let likedSongs = document.querySelector('.like')
-let listenedSongs = document.querySelector('.res')
-
-function musics(arrOfSongs) {
-    randomSongs.innerHTML = ""
-    for (let item of arr) {
-        randomSongs.innerHTML += `
-        <div src="" class="song" controls>
-            <div class="pleer2">
-                <div class="num"></div>
-                <div class="photo">
-                    <img src="" alt="">
-                </div>
-                <div class="description">
-                    <span></span><br>
-                    <span></span>
-                </div>
-            </div>
-            <div class="pleer2">
-                <div class="like"></div>
-                <div class="time"></div>
-                <div class="options"></div>
-            </div>
-        </div>    
-        `
-    }
-}
-
-
-
 let udd = document.querySelector('.udd')
 let settings = document.querySelector('.settings')
 let playlist = document.querySelector('.playlist')
@@ -86,57 +42,32 @@ text3.onclick = () => {
 
 
 
+let input = document.querySelector('#inp')
+let span = document.querySelector('.name1')
+
+localStorage.setItem('val', input.value)
 
 
-
-// let nameD = prompt('Введите имя')
-
-// let inpName = document.querySelector('#inp')
-// let spanName = document.querySelector('name')
-// let firstName = document.querySelector('firstName')
-
-// spanName.innerHTML = nameD   
 
 
 let ii = document.querySelectorAll('.ii')
-let one1 = document.querySelectorAll('#one')
-let two = document.querySelectorAll('#two')
-let options = document.querySelectorAll('.options')
 let like = document.querySelectorAll('.like')
+
+
+
+like.forEach(like =>{
+    like.onclick = ()  => {
+        like.innerHTML = "💚"
+    }
+})
 
 
 ii.forEach(ii => {
     ii.onmouseenter = () => {
-        one1.forEach(one1 => {
-            one1.style.color = "#00EBBD"
-        })
-        two.forEach(two => {
-            two.style.color = "#fff"
-        })
-        options.forEach(options => {
-            options.style.display = "block"
-        })
-        like.forEach(like => {
-            like.style.display = "block"
-            like.onclick = () => {
-                like.innerHTML = "💚"
-            }
-        })
+        ii.classList.add('activeSong')
     }
     ii.onmouseleave = () => {
-        one1.forEach(one1 => {
-            one1.style.color = "#fff"
-        })
-        two.forEach(two => {
-            two.style.color = "#73848D"
-        })
-        options.forEach(options => {
-            options.style.display = "none"
-        })
-        like.forEach(like => {
-            like.style.display = "none"
-        })
-
+        ii.classList.remove('activeSong')
     }
 })
 
@@ -313,11 +244,12 @@ let inpp = document.querySelector('.inpp')
 let inp = document.querySelector('#inp')
 let on = document.querySelector('checkbox')
 
+
 daun.onclick = () => {
     p.classList.toggle('b')
-    console.log(p.className);
 }
 saveSettings.onclick = () => {
+    span.innerHTML = localStorage.getItem('val')
     if (p.className === 'b') {
         one.style.background = "var(--background-color-orange)"
         first.style.background = "var(--background-color-or)"
@@ -367,6 +299,7 @@ saveSettings.onclick = () => {
             udd.style.display = "none"
             settings.style.display = "none"
             settings.style.display = "block"
+            playlist.style.display = "none"
             active.className = "text2"
             active.style.color = "white"
             text2.className = "text2"
@@ -375,40 +308,22 @@ saveSettings.onclick = () => {
             text3.style.color = "#EB735C"
         }
         
-        ii.forEach(ii => {
-            ii.onmouseenter = () => {
-                one1.forEach(one1 => {
-                    one1.style.color = "var(--org-color)"
-                })
-                two.forEach(two => {
-                    two.style.color = "#fff"
-                })
-                options.forEach(options => {
-                    options.style.display = "block"
-                })
-                like.forEach(like => {
-                    like.style.display = "block"
-                    like.onclick = () => {
-                        like.innerHTML = "🧡"
-                    }
-                })
-            }
-            ii.onmouseleave = () => {
-                one1.forEach(one1 => {
-                    one1.style.color = "#fff"
-                })
-                two.forEach(two => {
-                    two.style.color = "#73848D"
-                })
-                options.forEach(options => {
-                    options.style.display = "none"
-                })
-                like.forEach(like => {
-                    like.style.display = "none"
-                })
-
+        like.forEach(like =>{
+            like.onclick = ()  => {
+                like.innerHTML = "🧡"
             }
         })
+        
+        
+        ii.forEach(ii => {
+            ii.onmouseenter = () => {
+                ii.classList.add('activeSong1')
+            }
+            ii.onmouseleave = () => {
+                ii.classList.remove('activeSong1')
+            }
+        })
+
 
     } else {
         one.style.background = "var(--background-color-green)"
@@ -468,40 +383,152 @@ saveSettings.onclick = () => {
             text2.style.color = "white"
         }
 
+        like.forEach(like =>{
+            like.onclick = ()  => {
+                like.innerHTML = "💚"
+            }
+        })
+        
+        
         ii.forEach(ii => {
             ii.onmouseenter = () => {
-                one1.forEach(one1 => {
-                    one1.style.color = "#00EBBD"
-                })
-                two.forEach(two => {
-                    two.style.color = "#fff"
-                })
-                options.forEach(options => {
-                    options.style.display = "block"
-                })
-                like.forEach(like => {
-                    like.style.display = "block"
-                    like.onclick = () => {
-                        like.innerHTML = "💚"
-                    }
-                })
+                ii.classList.add('activeSong')
             }
             ii.onmouseleave = () => {
-                one1.forEach(one1 => {
-                    one1.style.color = "#fff"
-                })
-                two.forEach(two => {
-                    two.style.color = "#73848D"
-                })
-                options.forEach(options => {
-                    options.style.display = "none"
-                })
-                like.forEach(like => {
-                    like.style.display = "none"
-                })
-
+                ii.classList.remove('activeSong')
             }
         })
 
     }
 }
+
+
+
+let options = document.querySelectorAll('.options')
+let option = document.querySelector('.option')
+let option1 = document.querySelectorAll('.option1')
+let k = document.querySelector('.k')
+
+
+options.forEach(options => {
+    options.onclick = () =>{
+        option1.forEach(option1 => {
+            option1.classList.add('option')
+        })
+    }
+}) 
+k.onclick = () =>{
+    if(p.className === 'b'){
+        like.forEach(like =>{
+            like.innerHTML = "🧡"
+        })
+    } else{
+        like.forEach(like =>{
+            like.innerHTML = "💚"
+        })
+    }
+    option1.forEach(option1 => {
+        option1.classList.remove('option')
+    })
+}
+
+
+
+
+let arrOfSongs = [
+    {
+        id: 1,
+        name: 'I can fly',
+        artist: 'Xcho',
+        time: '2:13',
+    },
+    {
+        id: 2,
+        name: 'Mask off',
+        artist: 'Nedir',
+        time: '3:56'
+    },
+    {
+        id: 3,
+        name: 'Музыка для души',
+        artist: 'Unknown',
+        time: '1:45'
+    },
+    {
+        id: 4,
+        name: 'Люби меня',
+        artist: 'Mitagi',
+        time: '2:50'
+    },
+    {
+        id: 5,
+        name: 'Fire Man',
+        artist: 'Miyagi',
+        time: '7:38'
+    },
+    {
+        id: 6,
+        name: 'Вкус твоей любви',
+        artist: 'Unknown',
+        time: '1:54'
+    },
+    {
+        id: 7,
+        name: 'Bad karma - Slowed',
+        artist: 'Unknown',
+        time: '0:54'
+    },
+    {
+        id: 8,
+        name: 'Pullin up',
+        artist: 'Verdas',
+        time: '3:10'
+    },
+    {
+        id: 9,
+        name: 'Я закохався',
+        artist: 'Реп',
+        time: '4:35'
+    },
+    {
+        id: 10,
+        name: 'Я захожу в фортнайт',
+        artist: 'Мальчик',
+        time: '2:13'
+    }
+]
+
+let musics = document.querySelectorAll('.musics')
+function song(arrOfSongs) {
+    musics.forEach(musics =>{
+        musics.innerHTML = ""
+        for(let item of arrOfSongs){
+            musics.innerHTML = `
+                <div class="music1 ii" onclick="document.getElementById('fortnite').play()">
+                    <div class="song">
+                        <div class="pleer2">
+                            <div class="num">${item.id}</div>
+                            <div class="photo">
+                                <img src="./img/photo_2022-02-27_09-54-33.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <span id="one">${item.name}</span><br>
+                                <p id="two">${item.artist}</p>
+                            </div>
+                        </div>
+                        <div class="pleer2">
+                            <div class="like">
+                                <span>🤍</span>
+                            </div>
+                            <div class="time">${item.time}</div>
+                            <div class="options">
+                                <span>...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            `
+        }
+    })
+}
+song(arrOfSongs)

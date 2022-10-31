@@ -6,6 +6,7 @@
     --background-color-orange: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, #58261D 97%);
     --background-color-or: linear-gradient(0deg, rgba(15, 17, 19, 1) 21%, #3D2521 100%);
     --org-color: #EB735C;
+    --green-color: #00EBBD;
 }
 
 
@@ -340,6 +341,7 @@ input:checked+.slider:before {
 }
 .options{
     margin-top: -10px;
+    display: none;
 }
 .options, .like{
     display: none;
@@ -354,4 +356,55 @@ input:checked+.slider:before {
 }
 .io{
     margin: 20px 25px;
+}
+
+.activeSong span {
+    color: var(--green-color);
+}
+
+.activeSong #two{
+    color: white;
+}
+
+.activeSong .like{
+    display: flex;
+}
+.activeSong .options{
+    display: flex;
+}
+.activeSong1 span {
+    color: var(--org-color);
+}
+
+.activeSong1 #two{
+    color: white;
+}
+
+.activeSong1 .like{
+    display: flex;
+}
+.activeSong1 .options{
+    display: flex;
+}
+
+.option1{
+    display: none;
+}
+.option{
+    display: block;
+    width: 180px;
+    height: initial;
+    background-color: white;
+    position: absolute;
+    z-index: 3432424234545345435;
+    margin-left: 500px;
+    border-radius: 10px;
+}
+.option .llike{
+    height: 25px;
+    margin: 10px 10px;
+}
+
+.llike{
+    cursor: pointer;
 }
