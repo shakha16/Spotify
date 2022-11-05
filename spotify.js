@@ -1,3 +1,67 @@
+let arrOfSongs = [
+    {
+        id: 1,
+        name: 'I can fly',
+        artist: 'Xcho',
+        time: '2:13',
+    },
+    {
+        id: 2,
+        name: 'Mask off',
+        artist: 'Nedir',
+        time: '3:56'
+    },
+    {
+        id: 3,
+        name: 'Музыка для души',
+        artist: 'Unknown',
+        time: '1:45'
+    },
+    {
+        id: 4,
+        name: 'Люби меня',
+        artist: 'Mitagi',
+        time: '2:50'
+    },
+    {
+        id: 5,
+        name: 'Fire Man',
+        artist: 'Miyagi',
+        time: '7:38'
+    },
+    {
+        id: 6,
+        name: 'Вкус твоей любви',
+        artist: 'Unknown',
+        time: '1:54'
+    },
+    {
+        id: 7,
+        name: 'Bad karma - Slowed',
+        artist: 'Unknown',
+        time: '0:54'
+    },
+    {
+        id: 8,
+        name: 'Pullin up',
+        artist: 'Verdas',
+        time: '3:10'
+    },
+    {
+        id: 9,
+        name: 'Я закохався',
+        artist: 'Реп',
+        time: '4:35'
+    },
+    {
+        id: 10,
+        name: 'Я захожу в фортнайт',
+        artist: 'Мальчик',
+        time: '2:13'
+    }
+]
+
+
 /////work\\\\\
 let udd = document.querySelector('.udd')
 let settings = document.querySelector('.settings')
@@ -7,6 +71,7 @@ let active = document.querySelector('.active')
 let text1 = document.querySelector('.text1')
 let text2 = document.querySelector('.text2')
 let text3 = document.querySelector('.text3')
+let addToPlay = document.querySelector('.addToPlay')
 
 
 active.onclick = () => {
@@ -17,6 +82,7 @@ active.onclick = () => {
     active.className = "active"
     text3.className = "text3"
     text2.className = "text2"
+    addToPlay.style.display = "none"
 }
 
 text2.onclick = () => {
@@ -27,6 +93,7 @@ text2.onclick = () => {
     active.className = "text2"
     text2.className = "active"
     text3.className = "text3"
+    addToPlay.style.display = "none"
 }
 
 text3.onclick = () => {
@@ -37,6 +104,7 @@ text3.onclick = () => {
     active.className = "text2"
     text3.className = "active"
     text2.className = "text2"
+    addToPlay.style.display = "none"
 }
 
 
@@ -76,16 +144,16 @@ ii.forEach(ii => {
 
 
 
-let music1 = document.querySelector('.music1')
-let music2 = document.querySelector('.music2')
-let music3 = document.querySelector('.music3')
-let music4 = document.querySelector('.music4')
-let music5 = document.querySelector('.music5')
-let music6 = document.querySelector('.music6')
-let music7 = document.querySelector('.music7')
-let music8 = document.querySelector('.music8')
-let music9 = document.querySelector('.music9')
-let music10 = document.querySelector('.music10')
+let music1 = document.querySelectorAll('.music1')
+let music2 = document.querySelectorAll('.music2')
+let music3 = document.querySelectorAll('.music3')
+let music4 = document.querySelectorAll('.music4')
+let music5 = document.querySelectorAll('.music5')
+let music6 = document.querySelectorAll('.music6')
+let music7 = document.querySelectorAll('.music7')
+let music8 = document.querySelectorAll('.music8')
+let music9 = document.querySelectorAll('.music9')
+let music10 = document.querySelectorAll('.music10')
 
 
 let xcho = document.querySelector('#xcho')
@@ -104,7 +172,8 @@ let nameMusic = document.querySelector('#nameMusic')
 let nameMusic2 = document.querySelector('#nameMusic2')
 let audio = document.querySelector('.audio')
 
-music1.onclick = () => {
+music1.forEach(music1 =>{
+    music1.onclick = () => {
     lov.pause()
     karma.pause()
     pullin.pause()
@@ -114,126 +183,143 @@ music1.onclick = () => {
     maskOff.pause()
     fireMan.pause()
     xcho.play()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music2.onclick = () => {
-    lov.pause()
-    karma.pause()
-    pullin.pause()
-    im.pause()
-    fortnite.pause()
-    loveMe.pause()
-    maskOff.play()
-    fireMan.pause()
-    xcho.pause()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music3.onclick = () => {
-    karma.pause()
-    pullin.pause()
-    im.pause()
-    fortnite.pause()
-    loveMe.pause()
-    maskOff.pause()
-    fireMan.pause()
-    xcho.pause()
-    musiсForSoul.play()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music4.onclick = () => {
-    lov.pause()
-    karma.pause()
-    pullin.pause()
-    im.pause()
-    fortnite.pause()
-    loveMe.play()
-    maskOff.pause()
-    fireMan.pause()
-    xcho.pause()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music5.onclick = () => {
-    lov.pause()
-    karma.pause()
-    pullin.pause()
-    im.pause()
-    fortnite.pause()
-    loveMe.pause()
-    maskOff.pause()
-    xcho.pause()
-    fireMan.play()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music6.onclick = () => {
-    lov.play()
-    karma.pause()
-    pullin.pause()
-    im.pause()
-    fortnite.pause()
-    loveMe.pause()
-    maskOff.pause()
-    fireMan.pause()
-    xcho.pause()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music7.onclick = () => {
-    karma.play()
-    lov.pause()
-    pullin.pause()
-    im.pause()
-    fortnite.pause()
-    loveMe.pause()
-    maskOff.pause()
-    fireMan.pause()
-    xcho.pause()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music8.onclick = () => {
-    lov.pause()
-    karma.pause()
-    pullin.play()
-    im.pause()
-    fortnite.pause()
-    loveMe.pause()
-    maskOff.pause()
-    fireMan.pause()
-    xcho.pause()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music9.onclick = () => {
-    lov.pause()
-    karma.pause()
-    pullin.pause()
-    im.play()
-    fortnite.pause()
-    loveMe.pause()
-    maskOff.pause()
-    fireMan.pause()
-    xcho.pause()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
-music10.onclick = () => {
-    lov.pause()
-    karma.pause()
-    pullin.pause()
-    im.pause()
-    fortnite.play()
-    loveMe.pause()
-    maskOff.pause()
-    fireMan.pause()
-    xcho.pause()
-    nameMusic.innerHTML = "Xcho"
-    nameMusic2.innerHTML = "I can fly"
-}
+    }
+})
+music2.forEach(music2 =>{
+    music2.onclick = () => {
+        lov.pause()
+        karma.pause()
+        pullin.pause()
+        im.pause()
+        fortnite.pause()
+        loveMe.pause()
+        maskOff.play()
+        fireMan.pause()
+        xcho.pause()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music3.forEach(music3 =>{
+    music3.onclick = () => {
+        karma.pause()
+        pullin.pause()
+        im.pause()
+        fortnite.pause()
+        loveMe.pause()
+        maskOff.pause()
+        fireMan.pause()
+        xcho.pause()
+        musiсForSoul.play()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music4.forEach(music4 =>{
+    music4.onclick = () => {
+        lov.pause()
+        karma.pause()
+        pullin.pause()
+        im.pause()
+        fortnite.pause()
+        loveMe.play()
+        maskOff.pause()
+        fireMan.pause()
+        xcho.pause()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music5.forEach(music5 =>{
+    music5.onclick = () => {
+        lov.pause()
+        karma.pause()
+        pullin.pause()
+        im.pause()
+        fortnite.pause()
+        loveMe.pause()
+        maskOff.pause()
+        xcho.pause()
+        fireMan.play()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music6.forEach(music6 =>{
+    music6.onclick = () => {
+        lov.play()
+        karma.pause()
+        pullin.pause()
+        im.pause()
+        fortnite.pause()
+        loveMe.pause()
+        maskOff.pause()
+        fireMan.pause()
+        xcho.pause()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music7.forEach(music7 =>{
+    music7.onclick = () => {
+        karma.play()
+        lov.pause()
+        pullin.pause()
+        im.pause()
+        fortnite.pause()
+        loveMe.pause()
+        maskOff.pause()
+        fireMan.pause()
+        xcho.pause()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music8.forEach(music8 =>{
+    music8.onclick = () => {
+        lov.pause()
+        karma.pause()
+        pullin.play()
+        im.pause()
+        fortnite.pause()
+        loveMe.pause()
+        maskOff.pause()
+        fireMan.pause()
+        xcho.pause()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music9.forEach(music9 =>{
+    music9.onclick = () => {
+        lov.pause()
+        karma.pause()
+        pullin.pause()
+        im.play()
+        fortnite.pause()
+        loveMe.pause()
+        maskOff.pause()
+        fireMan.pause()
+        xcho.pause()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
+music10.forEach(music10 =>{
+    music10.onclick = () => {
+        lov.pause()
+        karma.pause()
+        pullin.pause()
+        im.pause()
+        fortnite.play()
+        loveMe.pause()
+        maskOff.pause()
+        fireMan.pause()
+        xcho.pause()
+        nameMusic.innerHTML = "Xcho"
+        nameMusic2.innerHTML = "I can fly"
+    }
+})
 
 let daun = document.querySelector('.bo')
 let p = document.querySelector('#p')
@@ -407,7 +493,8 @@ saveSettings.onclick = () => {
 let options = document.querySelectorAll('.options')
 let option = document.querySelector('.option')
 let option1 = document.querySelectorAll('.option1')
-let k = document.querySelector('.k')
+let k = document.querySelectorAll('.k')
+let label = document.querySelector('.l')
 
 
 options.forEach(options => {
@@ -417,118 +504,47 @@ options.forEach(options => {
         })
     }
 }) 
-k.onclick = () =>{
-    if(p.className === 'b'){
-        like.forEach(like =>{
-            like.innerHTML = "🧡"
-        })
-    } else{
-        like.forEach(like =>{
-            like.innerHTML = "💚"
-        })
-    }
-    option1.forEach(option1 => {
-        option1.classList.remove('option')
-    })
-}
-
-
-
-
-let arrOfSongs = [
-    {
-        id: 1,
-        name: 'I can fly',
-        artist: 'Xcho',
-        time: '2:13',
-    },
-    {
-        id: 2,
-        name: 'Mask off',
-        artist: 'Nedir',
-        time: '3:56'
-    },
-    {
-        id: 3,
-        name: 'Музыка для души',
-        artist: 'Unknown',
-        time: '1:45'
-    },
-    {
-        id: 4,
-        name: 'Люби меня',
-        artist: 'Mitagi',
-        time: '2:50'
-    },
-    {
-        id: 5,
-        name: 'Fire Man',
-        artist: 'Miyagi',
-        time: '7:38'
-    },
-    {
-        id: 6,
-        name: 'Вкус твоей любви',
-        artist: 'Unknown',
-        time: '1:54'
-    },
-    {
-        id: 7,
-        name: 'Bad karma - Slowed',
-        artist: 'Unknown',
-        time: '0:54'
-    },
-    {
-        id: 8,
-        name: 'Pullin up',
-        artist: 'Verdas',
-        time: '3:10'
-    },
-    {
-        id: 9,
-        name: 'Я закохався',
-        artist: 'Реп',
-        time: '4:35'
-    },
-    {
-        id: 10,
-        name: 'Я захожу в фортнайт',
-        artist: 'Мальчик',
-        time: '2:13'
-    }
-]
-
-let musics = document.querySelectorAll('.musics')
-function song(arrOfSongs) {
-    musics.forEach(musics =>{
-        musics.innerHTML = ""
-        for(let item of arrOfSongs){
-            musics.innerHTML = `
-                <div class="music1 ii" onclick="document.getElementById('fortnite').play()">
-                    <div class="song">
-                        <div class="pleer2">
-                            <div class="num">${item.id}</div>
-                            <div class="photo">
-                                <img src="./img/photo_2022-02-27_09-54-33.jpg" alt="">
-                            </div>
-                            <div class="description">
-                                <span id="one">${item.name}</span><br>
-                                <p id="two">${item.artist}</p>
-                            </div>
-                        </div>
-                        <div class="pleer2">
-                            <div class="like">
-                                <span>🤍</span>
-                            </div>
-                            <div class="time">${item.time}</div>
-                            <div class="options">
-                                <span>...</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            `
+k.forEach(k =>{
+    k.onclick = () =>{
+        if(p.className === 'b'){
+            like.forEach(like =>{
+                like.innerHTML = "🧡"
+            })
+        } else{
+            like.forEach(like =>{
+                like.innerHTML = "💚"
+            })
         }
-    })
+        option1.forEach(option1 => {
+            option1.classList.remove('option')
+        })
+    }
+})
+
+let on1 = document.querySelector('#id')
+let tr1 = document.querySelector('.tr1')
+
+on1.onclick = () => {
+    tr1.style.display = "block"
 }
-song(arrOfSongs)
+
+
+let dd = document.querySelectorAll('.dd')
+
+dd.forEach(dd=>{
+    dd.onclick = () =>{
+        addToPlay.style.display = "none"
+    }
+})
+
+
+let j = document.querySelectorAll('.j')
+
+j.forEach(j =>{
+    j.onclick = () =>{
+        option1.forEach(option1 => {
+            option1.classList.remove('option')
+        })
+        addToPlay.style.display = "block"
+    }
+})

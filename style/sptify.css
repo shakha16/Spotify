@@ -408,3 +408,50 @@ input:checked+.slider:before {
 .llike{
     cursor: pointer;
 }
+
+.addToPlay{
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: initial;
+    background-color: #191C21;
+    margin: -300px 280px;
+    border-radius: 10px;
+}
+
+.tr2{
+    display: flex;
+    margin: 20px 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+.on1{
+    color: white;
+}
+.tw2{
+    color: #84909C;
+    margin-right: 30px;
+}
+.tr1{
+    display: none;
+    margin: 20px 25px;
+}
+
+#inpt{
+    width: 300px;
+    height: 40px;
+    background-color: #32363D;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+.save2{
+    width: 300px;
+    height: 40px;
+    background-color: #00EBBD;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    bottom: 20px;
+}
