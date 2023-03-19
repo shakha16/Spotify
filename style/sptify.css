@@ -11,13 +11,14 @@ body {
 }
 
 .bilet {
-    width: 1000px;
+    width: 1200px;
     height: 450px;
     border: 2px solid black;
     position: relative;
     z-index: 2;
     background-color: white;
     display: flex;
+    align-items: center;
     margin: 0 auto;
     /* transform: rotate(180deg); */
 }
@@ -25,10 +26,11 @@ body {
 .back {
     position: absolute;
     top: 174px;
-    left: 452px;
+    left: 550px;
     width: 100px;
     height: 100px;
     opacity: 30%;
+    z-index: -23456;
 }
 
 .logotype {
@@ -53,7 +55,7 @@ body {
     gap: 50px;
     font-size: 25px;
     margin-left: 45px;
-    margin-top: 65px;
+    /* margin-top: 65px; */
 }
 
 select {
@@ -66,9 +68,9 @@ select {
 
 
 .check {
-    margin-top: 271px;
+    margin-top: 220px;
     font-size: 30px;
-    margin-left: -216px;
+    margin-left: -218px;
 }
 
 .flex {
@@ -84,7 +86,7 @@ select {
 }
 
 .bilet-top {
-    width: 1000px;
+    width: 1200px;
     height: 450px;
     border: 2px solid black;
     position: relative;
@@ -98,7 +100,7 @@ select {
 }
 
 .bilet-middle {
-    width: 1000px;
+    width: 1200px;
     height: 450px;
     border: 2px solid black;
     margin: 0 auto 5px auto;
