@@ -8,11 +8,12 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-transform: uppercase;
 }
 
 .bilet {
     width: 1200px;
-    height: 450px;
+    height: 560px;
     border: 2px solid black;
     position: relative;
     z-index: 2;
@@ -23,9 +24,32 @@ body {
     /* transform: rotate(180deg); */
 }
 
+.bilet-top {
+    width: 1200px;
+    height: 560px;
+    border: 2px solid black;
+    position: relative;
+    background-color: white;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    transform: rotate(180deg);
+}
+
+.bilet-middle {
+    width: 1200px;
+    height: 560px;
+    border: 2px solid black;
+    margin: 0 auto;
+    position: relative;
+}
+
+
 .back {
     position: absolute;
-    top: 174px;
+    top: 230px;
     left: 550px;
     width: 100px;
     height: 100px;
@@ -38,16 +62,20 @@ body {
     height: 150px;
     mix-blend-mode: darken;
     object-fit: cover;
+    border-radius: 15px;
 }
 
+
 .logotype2 {
+    width: 260px;
+    height: 100px;
     mix-blend-mode: darken;
     object-fit: cover;
 }
 
 
 .llo {
-    width: 232px;
+    width: 275px;
     height: 200px;
     overflow: hidden;
     display: flex;
@@ -70,7 +98,7 @@ body {
     align-items: center;
     gap: 25px;
     justify-content: center;
-    padding: 0 35px 0 50px;
+    padding: 0 18px 0 50px;
 }
 
 .info {
@@ -92,45 +120,28 @@ select {
 }
 
 
-.check {
+/* .check {
     margin-top: 220px;
     font-size: 30px;
     margin-left: -218px;
-}
+} */
 
 .flex {
+    padding: 12px;
+    width: 378px;
+    height: 120px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    border: 1px solid black;
 }
 
 .fnt {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 900;
     color: blue;
 }
 
-.bilet-top {
-    width: 1200px;
-    height: 450px;
-    border: 2px solid black;
-    position: relative;
-    background-color: white;
-    display: flex;
-    margin: 0 auto 5px auto;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    transform: rotate(180deg);
-}
-
-.bilet-middle {
-    width: 1200px;
-    height: 450px;
-    border: 2px solid black;
-    margin: 0 auto 5px auto;
-    position: relative;
-}
 
 h1 {
     font-size: 100px;
@@ -150,16 +161,17 @@ h2 {
 
 .all {
     display: flex;
-    flex-direction: column;
-    gap: 37px;
+    gap: 10px;
 }
 
 .one {
     display: flex;
-    gap: 166px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .two {
     display: flex;
-    gap: 152px;
+    flex-direction: column;
+    gap: 10px;
 }
