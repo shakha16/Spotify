@@ -38,6 +38,7 @@ document.onkeydown = (evt) => {
 
 let comp = document.querySelector('#company')
 let logo = document.querySelector('.logotype')
+let llo = document.querySelector('.llo')
 
 
 
@@ -51,13 +52,36 @@ document.addEventListener
                     'change',
                     function () {
                         let nameC = this.options[this.selectedIndex].text
+                        console.log(nameC   );
 
                         if(nameC === 'Havo yollari') {
                             logo.src = 'https://www.uzairways.com/sites/default/files/inline-images/lg14.png'
+                            llo.className = 'llo'
+                            logo.className = 'logotype'
                         } else if (nameC === 'Flymania') {
                             logo.src = './img/logo.jpg'
+                            llo.className = 'llo'
+                            logo.className = 'logotype'
                         } else if (nameC === 'Turkish airlines') {
                             logo.src = 'https://companieslogo.com/img/orig/THYAO.IS-f22d40e8.png?t=1602914708'
+                            llo.className = 'llo'
+                            logo.className = 'logotype'
+                        } else if (nameC === 'Wizz Air') {
+                            logo.src = './img/image_2023-03-20_12-15-52.png'
+                            llo.className = 'llo2'
+                            logo.className = 'logotype2'
+                        } else if (nameC === '') {
+                            logo.src = ''
+                        } else if (nameC === '') {
+                            logo.src = ''
+                        } else if (nameC === '') {
+                            logo.src = ''
+                        } else if (nameC === '') {
+                            logo.src = ''
+                        } else if (nameC === '') {
+                            logo.src = ''
+                        } else if (nameC === '') {
+                            logo.src = ''
                         }
                     }
                 )
