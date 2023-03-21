@@ -23,25 +23,10 @@ body {
     display: flex;
     align-items: center;
     margin: 0 auto;
-    /* transform: rotate(180deg); */
+    transform: rotate(180deg);   
     overflow: hidden;
 }
 
-#tech {
-    position: absolute;
-    z-index: -1234;
-    width: 912px;
-    height: 560px;
-}
-
-.div {
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    box-shadow: 10px 0px 16px 100px #CFD7D9;
-    left: 910px;
-    z-index: -12334567;
-}
 
 .bilet-top {
     width: 1200px;
@@ -59,11 +44,18 @@ body {
 
 .bilet-middle {
     width: 1200px;
-    height: 560px;
+    height: 550px;
     border: 2px solid black;
     margin: 0 auto;
     position: relative;
     display: flex;
+}
+
+#img, .img {
+    position: absolute;
+    width: 1199px;
+    height: 557px;
+    object-fit: cover;
 }
 
 
@@ -152,8 +144,24 @@ select {
     border: 1px solid black;
 }
 
+.flex2 {
+    padding: 12px;
+    width: 378px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+
 .fnt {
     font-size: 16px;
+    color: blue;
+}
+
+.fnt2 {
+    font-size: 13px;
     color: blue;
 }
 
@@ -172,9 +180,17 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: 12345678;
 }
 
 .all {
+    display: flex;
+    gap: 10px;
+    margin-top: -91px;
+}
+
+.all2    {
     display: flex;
     gap: 10px;
 }
@@ -193,7 +209,10 @@ h2 {
 
 .contacts {
     padding: 50px;
+    position: relative;
+    z-index: 1234567890;
 }
+
 
 .contacts h2 {
     font-size: 32px;
@@ -203,6 +222,27 @@ h2 {
 .contacts h3 {
     font-size: 25px;
     color: blue;
+    z-index: 10;
+}
+
+
+.location {
+    padding: 50px;
+    position: relative;
+    z-index: 1234567890;
+    margin-left: 15px;
+}
+
+
+.location h2 {
+    font-size: 32px;
+    color: blue;
+}
+
+.location h3 {
+    font-size: 25px;
+    color: blue;
+    z-index: 10;
 }
 
 .loc {
@@ -211,4 +251,62 @@ h2 {
     position: absolute;
     right: 75px;
     bottom: 75px;
+    opacity: 70%;
+}
+
+.divT {
+    background-color: white;
+    opacity: 50%;
+    position: absolute;
+    top: 329px;
+    z-index: -1;
+    width: 190px;
+    height: 154px;
+}
+
+.divT2 {
+    background-color: white;
+    opacity: 50%;
+    position: absolute;
+    top: 54px;
+    z-index: -1;
+    width: 471px;
+    height: 31px;
+}
+
+.divT3 {
+    background-color: white;
+    opacity: 50%;
+    position: absolute;
+    top: 131px;
+    z-index: -1;
+    width: 209px;
+    height: 55px;
+}
+
+.divT4 {
+    background-color: white;
+    opacity: 50%;
+    position: absolute;
+    top: 231px;
+    z-index: -1;
+    width: 204px;
+    height: 55px;
+}
+
+.divT5 {
+    background-color: white;
+    opacity: 50%;
+    position: absolute;
+    top: 54px;
+    z-index: -1;
+    width: 434px;
+    height: 31px;
+    left: 634px;
+}
+
+.r {
+    position: absolute;
+    bottom: 14px;
+    margin-left: 205px;
 }

@@ -1,39 +1,96 @@
-// let from = prompt('Откуда')
-// let to = prompt('Куда')
-// let flightTime = prompt('Время полёта')
-// let arrivalTime = prompt('Время прилёта')
+// let conf = confirm('Туда или туда и обратно')
 
-// let fromStr = document.querySelector('#from')
-// let toStr = document.querySelector('#to')
-// let flightStr = document.querySelector('#time')
-// let arrivalStr = document.querySelector('#time2')
+// let all = document.querySelector('.all')
+// let all2 = document.querySelector('.all2')
 
 
-// fromStr.innerHTML = from
-// toStr.innerHTML = to
-// flightStr.innerHTML = flightTime
-// arrivalStr.innerHTML = arrivalTime
+// if(conf === true) {
+//     all.remove()
+//     flightStr = document.querySelector('#time')
+// } else if (conf === false) {
+//     all2.remove()
+//     flightStr = document.querySelector('#time')
+// }
+
+let from = prompt('Откуда')
+let to = prompt('Куда')
+let flightTime = prompt('Время полёта')
+let arrivalTime = prompt('Время прилёта')
+
+let fromStr = document.querySelector('#from')
+let toStr = document.querySelector('#to')
+let flightStr = document.querySelector('#time')
+let arrivalStr = document.querySelector('#time2')
+
+
+fromStr.innerHTML = from
+toStr.innerHTML = to
+flightStr.innerHTML = flightTime
+arrivalStr.innerHTML = arrivalTime
 
 
 
-// let chekIn = document.querySelector('#chekIn')
-// let timeAfter1 = flightTime.slice(0, 2)
-// let timeAfter = timeAfter1 - 3
+
+// let from2 = prompt('Откуда')
+// let to2 = prompt('Куда')
+// let flightTime2 = prompt('Время полёта')
+// let arrivalTime2 = prompt('Время прилёта')
+
+// let fromStr2 = document.querySelector('#from2')
+// let toStr2 = document.querySelector('#to2')
+// let flightStr2 = document.querySelector('#time2_2')
+// let arrivalStr2 = document.querySelector('#time2-2')
+
+
+// fromStr2.innerHTML = from2
+// toStr2.innerHTML = to2
+// flightStr2.innerHTML = flightTime2
+// arrivalStr2.innerHTML = arrivalTime2
+
+// let chekIn2 = document.querySelector('#chekIn2')
+// let timeAfter12 = flightTime2.slice(0, 2)
+// let timeAfter2 = timeAfter12 - 3
+
 
 // document.onkeydown = (evt) => {
 //     evt = evt || window.event;
 //     if (evt.keyCode == 13) {
-//         if (timeAfter1 == '02') {
-//             chekIn.innerHTML = `23${time.innerHTML.slice(2, 5)}`
-//         } else if (timeAfter1 == '01') {
-//             chekIn.innerHTML = `22${time.innerHTML.slice(2, 5)}`
-//         } else if (timeAfter1 == '00') {
-//             chekIn.innerHTML = `21${time.innerHTML.slice(2, 5)}`
+//         if (timeAfter12 == '02') {
+//             chekIn2.innerHTML = `23${flightStr2.innerHTML.slice(2, 5)}`
+//         } else if (timeAfter12 == '01') {
+//             chekIn2.innerHTML = `22${flightStr2.innerHTML.slice(2, 5)}`
+//         } else if (timeAfter12 == '00') {
+//             chekIn2.innerHTML = `21${flightStr2.innerHTML.slice(2, 5)}`
 //         } else {
-//             chekIn.innerHTML = `${timeAfter}${time.innerHTML.slice(2, 5)}`
+//             chekIn2.innerHTML = `${timeAfter2}${flightStr2.innerHTML.slice(2, 5)}`
+//             console.log(flightStr2);
 //         }
 //     }
 // }
+
+
+
+
+
+
+let chekIn = document.querySelector('#chekIn')
+let timeAfter1 = flightTime.slice(0, 2)
+let timeAfter = timeAfter1 - 3
+
+document.onkeydown = (evt) => {
+    evt = evt || window.event;
+    if (evt.keyCode == 13) {
+        if (timeAfter1 == '02') {
+            chekIn.innerHTML = `23${time.innerHTML.slice(2, 5)}`
+        } else if (timeAfter1 == '01') {
+            chekIn.innerHTML = `22${time.innerHTML.slice(2, 5)}`
+        } else if (timeAfter1 == '00') {
+            chekIn.innerHTML = `21${time.innerHTML.slice(2, 5)}`
+        } else {
+            chekIn.innerHTML = `${timeAfter}${time.innerHTML.slice(2, 5)}`
+        }
+    }
+}
 
 
 let comp = document.querySelector('#company')
@@ -52,8 +109,6 @@ document.addEventListener
                     'change',
                     function () {
                         let nameC = this.options[this.selectedIndex].text
-                        console.log(nameC   );
-
                         if(nameC === 'Uzbekistan Air') {
                             logo.src = 'https://www.uzairways.com/sites/default/files/inline-images/lg14.png'
                             llo.className = 'llo'
@@ -147,6 +202,11 @@ document.addEventListener
                             logo.style.borderRadius = '15px'
                         } else if (nameC === 'Air Astana') {
                             logo.src = 'data:image/png;base64,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'
+                            llo.className = 'llo'
+                            logo.className = 'logotype'
+                            logo.style.borderRadius = '15px'
+                        } else if (nameC === 'Asiana Airlines') {
+                            logo.src = 'https://companieslogo.com/img/orig/020560.KS-a5d795c3.png?t=1596169047'
                             llo.className = 'llo'
                             logo.className = 'logotype'
                             logo.style.borderRadius = '15px'
